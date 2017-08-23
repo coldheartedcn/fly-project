@@ -1,0 +1,5 @@
+.gradle
+
+#IDEA artifacts and output dirs
+.idea
+*.iml

@@ -1,0 +1,43 @@
+configure(subprojects) {project ->
+    group 'cn.coldheartedcn'
+
+    apply plugin: 'groovy'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    compileJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+        options.encoding = 'UTF-8'
+    }
+
+    compileGroovy {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+        options.encoding = 'UTF-8'
+    }
+
+    compileTestJava {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+        options.encoding = 'UTF-8'
+        options.compilerArgs += '-parameters'
+    }
+
+    compileTestGroovy {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+        options.encoding = 'UTF-8'
+        options.compilerArgs += '-parameters'
+    }
+
+}
+
+project('fly-wildfly'){
+    description = '对wildfly的研究'
+    version = '0.1.0-SNAPSHOT'
+
+    dependencies {
+
+    }
+}
